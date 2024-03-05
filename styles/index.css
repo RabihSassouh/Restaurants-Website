@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffd700;
+}
+
+header {
+  padding: 1% 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+header h1,
+p {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.image-container {
+  background-image: url("/assets/imgs/foodbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 800px;
+}
+
+/* Change the image text using the below */
+.img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Adjust text color as needed */
+  font-family: "Times New Roman", Times, serif;
+  z-index: 1;
+}
+.img-text p {
+  line-height: 25px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.img-text h1 {
+  font-size: 400%;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* restaurant cards and display for the user */
+.restaurant-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10%;
+  width: 100%;
+}
+
+.restaurant-cards {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  margin: 1%;
+  width: 15%;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-cards:hover {
+  background-color: #959595; /* Change background color on hover */
+  transform: scale(1.05); /* Optional: Add a scale effect on hover */
+}
+
+.restaurant-cards img {
+  width: 100%; /* Adjust image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add border-radius for rounded images */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a box-shadow to images */
+}
