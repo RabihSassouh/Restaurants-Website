@@ -59,23 +59,36 @@ p {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+/* restaurant cards and display for the user */
 .restaurant-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 11%;
+  gap: 10%;
   width: 100%;
 }
 
 .restaurant-cards {
+  display: flex;
   text-align: center;
   align-items: center;
-  width: 100%;
-  margin-top: 1%;
-  width: 26%;
+  flex-direction: column;
+  width: auto;
+  margin: 1%;
+  width: 15%;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-cards:hover {
+  background-color: #959595; /* Change background color on hover */
+  transform: scale(1.05); /* Optional: Add a scale effect on hover */
 }
 
 .restaurant-cards img {
-  width: 60%;
-  height: 60%;
+  width: 100%; /* Adjust image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add border-radius for rounded images */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a box-shadow to images */
 }
