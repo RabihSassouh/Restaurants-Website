@@ -58,3 +58,24 @@ p {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+.restaurant-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 11%;
+  width: 100%;
+}
+
+.restaurant-cards {
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1%;
+  width: 26%;
+}
+
+.restaurant-cards img {
+  width: 60%;
+  height: 60%;
+}
