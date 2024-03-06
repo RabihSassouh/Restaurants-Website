@@ -7,6 +7,9 @@
     width: 100%;
     height: 100%;
 }
+.hero h1{
+    font-size: 45px;
+}
 .favIcon{
     width: 100px;
     height: 100px;
