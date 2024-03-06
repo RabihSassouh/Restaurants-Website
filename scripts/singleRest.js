@@ -1,5 +1,11 @@
-const favIcon = document.getElementById("favIcon");
-const restName=document.getElementById("restName");
+document.addEventListener("DOMContentLoaded", function () {
+  const restaurantInfo = document.getElementById("restaurantInfo");
+
+
+  // Retrieve the selected restaurant information from localStorage
+  const selectedRestaurant = JSON.parse(
+    localStorage.getItem("selectedRestaurant")
+  );
 
 const container=document.querySelector(".container");
 const description=document.getElementById("description");
@@ -93,7 +99,19 @@ let restaurant=[
       Image3: "../assets/imgs/sushi3.jpg",
     }
 
-]
+  // Display information about the selected restaurant
+  if (selectedRestaurant) {
+    const restaurantName = document.createElement("h1");
+    restaurantName.textContent = selectedRestaurant.name;
+
+
+    const restaurantDescription = document.createElement("p");
+    restaurantDescription.textContent = selectedRestaurant.description;
+
+    restaurantInfo.appendChild(restaurantName);
+    restaurantInfo.appendChild(restaurantDescription);
+  }
+});
 
 favIcon.addEventListener("click", () => {
   if (favIconStatus) {
@@ -148,5 +166,6 @@ restaurantLoader();
       // console.log(products[i]);
   //   });
   // }
+
 
 
