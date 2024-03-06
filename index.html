@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha384-..."
+    />
+    <link rel="stylesheet" href="../styles/common/utilities.css" />
+    <link rel="stylesheet" href="../styles/common/colors.css" />
     <link rel="stylesheet" href="/styles/index.css" />
     <title>FoodieFind</title>
   </head>
   <body>
     <header>
       <h1>FoodieFind</h1>
-      <p class="user-name">User-Name</p>
+      <a class="user-name" href="#"><i class="fa-regular fa-user"></i></a>
     </header>
 
     <div class="img-text">
@@ -25,7 +32,15 @@
       <div class="image-overlay"></div>
     </div>
 
-    <div class="">test</div>
+    <div class="search-wrapper">
+      <div class="main-title">
+        <h1>Restaurants</h1>
+      </div>
+      <div class="search-bar">
+        <input type="search" placeholder="Type to search" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
     <div class="restaurant-wrapper">
       <div class="restaurant-cards">
         <img src="/assets/imgs/restaurantimg1.jpg" />
@@ -34,7 +49,7 @@
 
       <div class="restaurant-cards">
         <img src="/assets/imgs/restaurantimg2.jpg" />
-        <h2>KFC</h2>
+        <h2>Wendys'</h2>
       </div>
 
       <div class="restaurant-cards">
@@ -56,6 +71,54 @@
         <img src="/assets/imgs/restaurantimg6.jpg" />
         <h2>Sushi Restaurant</h2>
       </div>
+      <div class="restaurant-cards">
+        <img src="/assets/imgs/restaurantimg1.jpg" />
+        <h2>Master Chef</h2>
+      </div>
+
+      <div class="restaurant-cards">
+        <img src="/assets/imgs/restaurantimg2.jpg" />
+        <h2>Wendys'</h2>
+      </div>
+
+      <div class="restaurant-cards">
+        <img src="/assets/imgs/restaurantimg3.jpg" />
+        <h2>Chuyax</h2>
+      </div>
+
+      <div class="restaurant-cards">
+        <img src="/assets/imgs/restaurantimg4.jpg" />
+        <h2>Burgitos</h2>
+      </div>
+
+      <div class="restaurant-cards">
+        <img src="/assets/imgs/restaurantimg5.jpg" />
+        <h2>Burger King</h2>
+      </div>
+
+      <div class="restaurant-cards">
+        <img src="/assets/imgs/restaurantimg6.jpg" />
+        <h2>Sushi Restaurant</h2>
+      
     </div>
+
+    <footer>
+      <h2>
+        "FoodieFinder: Unleashing a World of Flavors, Where Every Bite Tells a
+        Story!"
+      </h2>
+      <div class="footer-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+
+      <div class="footer-policy">
+        <a href="#"><p>Contact US</p></a>
+        <a href="#"><p>Privacy Policy</p></a>
+        <a href="#"><p>Terms of Use</p></a>
+      </div>
+    </footer>
+
+    <script src="/scripts/index.js"></script>
   </body>
 </html>
