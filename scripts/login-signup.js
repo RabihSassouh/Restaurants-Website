@@ -23,6 +23,10 @@ const adminsToAdd = [
     {
         username: "rabih",
         password: "rabih123"
+    },
+    {
+        username: "mhamad",
+        password: "mhamad111"
     }
 ];
 
