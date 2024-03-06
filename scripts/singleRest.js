@@ -12,6 +12,7 @@ let restaurant=[
     "innovation. Our menu features a diverse selection of dishes crafted with fresh, locally-sourced"+
     " ingredients to create an unforgettable dining experience.",
     location: "Beirut, Sursock, 20631111",
+  
     instagram: "MasterChef",
     Opening: "Opening hours: 11 am till 1 am",
     phone: "Phone number: +961 70708090",
@@ -122,6 +123,11 @@ function restaurantInfo(restaurant) {
 
 restCardsButtons=document.querySelectorAll(".restaurant-cards");
 console.log(restCardsButtons)
+restCardsButtons.forEach(function (card) {
+  const restaurantName = card.querySelector("h2")
+  
+console.log(restaurantName);
+})
 
 // for (let i = 0; i < restCardsButtons.length; i++) {
 //     const button = restCardsButtons[i];
