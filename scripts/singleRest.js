@@ -25,6 +25,8 @@ let restaurant=[
     id:2,
     name: "Wendy's",
     description: "Put Down The Pizza Bagel. Pick Up The Burger. Stay hungry my friends!",
+    // "KFC is renowned for its iconic Southern-inspired cuisine, featuring world-famous fried"+
+    // " chicken seasoned with a proprietary blend of herbs and spices.",
     location: "Mansourieh, Moutazah",
     instagram: "Wendy's-lb",
     Opening: "Opening hours: 7 am till 10 pm",
@@ -114,39 +116,31 @@ function restaurantLoader(){
 
 function restaurantInfo(restaurant) {
     restName.innerHTML=`${restaurant.name}`;
-    container.style.backgroundImage=`url("${restaurant.Image1}")`;
-    container.style.backgroundSize = "cover";
-    description.innerHTML=`${restaurant.description}`;
+    // container.style.backgroundImage=`url("${restaurant.Image1}")`;
+    // container.style.backgroundSize = "cover";
+    // description.innerHTML=`${restaurant.description}`;
 }
 
-function repeatAction(givenId){
-  restaurant.forEach(restaurant =>{
-    if (restaurant.id==givenId){
-      console.log("sucess");
-    }
-  })
-}
-repeatAction(2);
-restaurantLoader();
-// restCardsButtons=document.querySelectorAll(".restaurant-cards");
-// console.log(restCardsButtons)
-// restCardsButtons.forEach(function (card) {
-//   const restaurantName = card.querySelector("h2")
+restCardsButtons=document.querySelectorAll(".restaurant-cards");
+console.log(restCardsButtons)
+restCardsButtons.forEach(function (card) {
+  const restaurantName = card.querySelector("h2")
   
-// console.log(restaurantName);
-// })
+console.log(restaurantName);
+})
 
 // for (let i = 0; i < restCardsButtons.length; i++) {
 //     const button = restCardsButtons[i];
 
-    // button.addEventListener("click", function () {
-    //   console.log(button.classList);
-    //   button.classList.add("class");
-    //   button.classList.remove("class");
-    //   button.classList.toggle("class");
-    //   button.getAttribute("product-id");
-      // console.log(products[i]);
-  //   });
-  // }
+//     button.addEventListener("click", function () {
+//       console.log(button.classList);
+//     //   button.classList.add("class");
+//     //   button.classList.remove("class");
+//     //   button.classList.toggle("class");
+//     //   button.getAttribute("product-id");
+//       // console.log(products[i]);
+//     });
+//   }
 
 
+restaurantLoader()
