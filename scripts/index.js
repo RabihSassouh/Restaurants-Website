@@ -195,3 +195,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+restaurantCards.forEach(function (card) {
+  card.addEventListener("click", function () {
+    window.location.href = "/pages/singleRest.html";
+  });
+});
+// restaurant-cards.addEventListener("click", function () {
+//   localStorage.setItem("selectedRestaurant", JSON.stringify(restaurant));
+//   window.location.href = "/pages/singleRest.html";
+// });
+
