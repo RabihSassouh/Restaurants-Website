@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  z-index: 1000;
+}
+
+.header > h1 {
+}
+
+.user-name {
+  font-size: 150%;
+}
+
+.header h1,
+p {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.container > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.box {
+  position: absolute;
+  width: 330px;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 35px;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  gap: 14px;
+}
+
+.box > h1 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.incorrect-credentials-note {
+  color: red !important;
+  font-size: 14px;
+}
+
+.box > input {
+  height: 25px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 15px;
+  border: #626262 solid 1px;
+}
+
+.box > input:focus {
+  outline: none;
+  border: 1px solid #ffd700;
+}
+
+input[type="radio"] {
+  accent-color: #ffd700;
+  height: 12px;
+}
+
+.gender > label {
+  margin-right: 10px;
+}
+
+.remember-me {
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  accent-color: #ffd700;
+  height: 9px;
+}
+
+.remember-me input {
+  margin-right: 6px;
+}
+
+.submit-btn {
+  height: 30px;
+  width: 100%;
+  background-color: #ffd700;
+  border-radius: 25px;
+}
+
+.submit-btn:hover {
+  background-color: #ffd900d1;
+}
+
+.forgot-password {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.forgot-password:hover {
+  color: #626262;
+}

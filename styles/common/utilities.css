@@ -1,22 +1,33 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .flex {
-    display: flex;
-  }
-  
-  .center {
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .row {
-    flex-direction: row;
-  }
-  
-  .column {
-    flex-direction: column;
-  }
-  
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.bold {
+  font-weight: 700;
+}
