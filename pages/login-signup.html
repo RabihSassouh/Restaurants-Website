@@ -21,31 +21,33 @@
     </header> -->
 
     <div class="container hide">
-        <img src="../assets/imgs/login-signup-bg.jpg" />
+        <img src="../assets/imgs/bg.jpg" />
 
         <div class="box white-bg flex column">
             <h1 class="bold">LOGIN</h1>
-            <p class="incorrect-credentials-note hide" id="incorrectCredentialsNote">incorrect username or password!</p>
+            <p class="incorrect-inputs-note hide" id="incorrectCredentialsNote">Incorrect username or password</p>
             <input type="text" class="username-btn" id="username" placeholder="username" />
             <input type="password" class="password-btn" id="password" placeholder="password" />
-            <button class="submit-btn white-text bold" id="login">Log in</button>
             <label class="remember-me">
                 <input type="checkbox" id="rememberMe"/>Remember me
             </label>
+            <button class="login-btn white-text bold primary-bg" id="login">Log in</button>
             <a class="forgot-password" href="#">Forgot password?</a>
         </div>
     </div>
 
     <div class="container">
-        <img src="../assets/imgs/login-signup-bg.jpg" />
+        <img src="../assets/imgs/bg.jpg" />
 
         <div class="box white-bg flex column">
             <h1 class="bold">SIGN UP</h1>
-            <p class="incorrect-credentials-note hide" id="incorrectCredentialsNote">incorrect username or password!</p>
-            <input type="email" class="" id="email" placeholder="email" />
-            <input type="text" class="" id="username" placeholder="username" />
-            <input type="password" class="password-btn" id="password" placeholder="password" />
-            <input type="password" class="" id="username" placeholder="confirm password" />
+            <p class="incorrect-inputs-note hide" id="requiredNote">Please fill in all the inputs</p>
+            <input type="text" class="" id="username" placeholder="Username" />
+            <p class="incorrect-inputs-note hide" id="usernameNote">Username already exists</p>
+            <input type="email" class="" id="email" placeholder="E-mail" />
+            <input type="password" class="password-btn" id="password" placeholder="Password" />
+            <input type="password" class="" id="username" placeholder="Confirm password" />
+            <p class="incorrect-inputs-note hide" id="passwordNote">Passwords are not matching</p>
             <div class="gender">
                 <input type="radio" id="male" value="male" name="gender">
                 <label>Male</label>
@@ -54,7 +56,7 @@
                 <input type="radio" id="male" value="not-set" name="gender">
                 <label>Not set</label>
             </div>
-            <button class="submit-btn white-text bold" id="login">Register</button>
+            <button class="register-btn white-text bold primary-bg" id="login">Register</button>
         </div>
     </div>
 
