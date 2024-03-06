@@ -1,26 +1,74 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const click = document.getElementById("click");
-  const wrapper = document.getElementById("wrapper");
+  const searchInput = document.getElementById("searchInput");
+  const restaurantCards = document.querySelectorAll(".restaurant-cards");
+  const previous = document.getElementById("previous");
+  const titleElement = document.getElementById("title");
+  const descriptionElement = document.getElementById("description");
+  let currentIndex = 0;
+  let imageContainer = document.querySelector(".image-container");
 
-  function highlightText() {
-    // Get the input text and search word
-    var inputText = wrapper.textContent;
-    var searchWord = document.getElementById("search-word").value;
+  let images = [
+    {
+      url: "/assets/imgs/foodbackground1.jpg",
+      title: "EASTER FEAST",
+      description:
+        "Happy Easter from the Barbecrew! Enjoy our ready-to-heat Greek-inspired feast, featuring herb-rub smoked lamb shoulder, spinach + feta pie, lemon roasted potatoes, pistachio-olive oil cake, and more! Place your order by 3/27 for pickup or delivery on 3/30.",
+    },
+    {
+      url: "/assets/imgs/foodbackground2.jpg",
+      title: "SPECIAL SAUCE",
+      description:
+        "New Specials just dropped! Try the Lary David pastrami sandwich, Pork Belly Bao Buns, and pitmaster Rob's che's special ",
+    },
+    {
+      url: "/assets/imgs/foodbackground3.jpg",
+      title: "SUNDAY BRUNCH",
+      description:
+        "Join us for a delightful Sunday brunch experience. Indulge in our mouth-watering dishes, from fluffy pancakes and crispy bacon to freshly squeezed juices. Bring your friends and family for a relaxing and delicious start to your Sunday.",
+    },
+  ];
 
-    // Create a regular expression with the search word and the global flag for multiple occurrences
-    var regex = new RegExp(searchWord, "gi");
+  function changeBackground(index) {
+    currentIndex = (currentIndex + index + images.length) % images.length;
+    imageContainer.style.backgroundImage =
+      "url('" + images[currentIndex].url + "')";
+    titleElement.innerText = images[currentIndex].title;
+    descriptionElement.innerText = images[currentIndex].description;
+  }
+  setInterval(function () {
+    navigate(1);
+  }, 15000);
 
-    // Replace the matched words with a span having the id 'highlighted-text'
-    var highlightedText = inputText.replace(
-      regex,
-      '<span id="highlighted-text"">$&</span>'
-    );
-
-    // Display the highlighted text
-    wrapper.innerHTML = highlightedText;
+  function navigate(direction) {
+    changeBackground(direction);
   }
 
-  click.addEventListener("click", function () {
-    highlightText();
+  previous.addEventListener("click", () => {
+    navigate(-1);
   });
+
+  next.addEventListener("click", () => {
+    navigate(+1);
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener("input", function () {
+      const searchValue = searchInput.value.toLowerCase();
+
+      restaurantCards.forEach(function (card) {
+        const restaurantName = card.querySelector("h2");
+
+        if (restaurantName) {
+          const nameText = restaurantName.innerText.toLowerCase();
+
+          if (nameText.includes(searchValue)) {
+            card.classList.remove("hidden");
+          } else {
+            card.classList.add("hidden");
+          }
+        }
+      });
+    });
+  }
 });
+
