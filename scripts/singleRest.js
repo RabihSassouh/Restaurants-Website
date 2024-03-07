@@ -1,12 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const restaurantInfo = document.getElementById("restaurantInfo");
+const favIcon = document.getElementById("favIcon");
+const restName=document.getElementById("restName");
 
+<<<<<<< HEAD
+=======
 
   // Retrieve the selected restaurant information from localStorage
   const selectedRestaurant = JSON.parse(
     localStorage.getItem("selectedRestaurant")
   );
 
+>>>>>>> 1b1e82d0def0adef516f6fd6e3d6b8551b8c7ef7
 const container=document.querySelector(".container");
 const description=document.getElementById("description");
 let favIconStatus = false;
@@ -21,7 +24,7 @@ let restaurant=[
   
     instagram: "MasterChef",
     Opening: "Opening hours: 11 am till 1 am",
-    phone: "Phone number: +961 70708090",
+    phone: "+961 70708090",
     website: "www.masterchef.lb",
     Image1: "../assets/imgs/masterChef1.jpg",
     Image2: "../assets/imgs/masterChef2.jpg",
@@ -34,7 +37,7 @@ let restaurant=[
     location: "Mansourieh, Moutazah",
     instagram: "Wendy's-lb",
     Opening: "Opening hours: 7 am till 10 pm",
-    phone: "Phone number: +961 04 409 737",
+    phone: "+961 04 409 737",
     website: "www.wendys.lb", 
     Image1: "../assets/imgs/wendy's1.jpg",
     Image2: "../assets/imgs/wendy's2.jpg",
@@ -48,7 +51,7 @@ let restaurant=[
       location: "Ghanem Street, Ain Mreisse, Beirut",
       instagram: "Chuyax-lb",
       Opening: "Opening hours: 9 am till 12 am",
-      phone: "Phone number: +961 01 013 737",
+      phone: "+961 01 013 737",
       website: "www.chuyax.lb", 
       Image1: "../assets/imgs/chuyax1.jpg",
       Image2: "../assets/imgs/chuyax2.jpg",
@@ -63,7 +66,7 @@ let restaurant=[
       location: "Mar Mikhael, Pharaon Street, Beirut",
       instagram: "burgitos-lb",
       Opening: "Opening hours: 10 am till 12 am",
-      phone: "Phone number: +961 01 502244",
+      phone: "+961 01 502244",
       website: "www.burgitos.lb", 
       Image1: "../assets/imgs/burgitos1.jpg",
       Image2: "../assets/imgs/burgitos2.jpg",
@@ -78,7 +81,7 @@ let restaurant=[
       location: " Beirut, Forn El Chebbak",
       instagram: "burgerking-lb",
       Opening: "Opening hours: 10 am till 1 am",
-      phone: "Phone number: +961 01 771266",
+      phone: "+961 01 771266",
       website: "www.burgerking.lb", 
       Image1: "../assets/imgs/burgerking1.jpg",
       Image2: "../assets/imgs/burgerking2.jpg",
@@ -92,18 +95,24 @@ let restaurant=[
       location: " Beirut, Al Raouche",
       instagram: "sushi-lb",
       Opening: "Opening hours: 9 am till 1 am",
-      phone: "Phone number: +961 01 255811",
+      phone: "+961 01 255811",
       website: "www.sushi.lb", 
       Image1: "../assets/imgs/sushi1.jpg",
       Image2: "../assets/imgs/sushi2.jpg",
       Image3: "../assets/imgs/sushi3.jpg",
     }
 
-  // Display information about the selected restaurant
-  if (selectedRestaurant) {
-    const restaurantName = document.createElement("h1");
-    restaurantName.textContent = selectedRestaurant.name;
+]
 
+<<<<<<< HEAD
+favIcon.addEventListener("click", function()  {
+  if (favIconStatus) {
+    alert("Removed from favorites");
+    // window.location.href="../index.html?favorites="+ `${restaurant.id}`;
+  } else {
+    alert("Added to favorites");
+  }
+=======
 
     const restaurantDescription = document.createElement("p");
     restaurantDescription.textContent = selectedRestaurant.description;
@@ -119,8 +128,22 @@ favIcon.addEventListener("click", () => {
   } else {
     alert("Added to favorite");
   }
+>>>>>>> 1b1e82d0def0adef516f6fd6e3d6b8551b8c7ef7
   favIconStatus = !favIconStatus;
 })
+    // localStorage.setItem("item","test")
+    // window.location.href="../index.html"
+    // ?favorites="+ `${data-restaurant.id}`;
+  
+  // if (favIconStatus) {
+    // Save the selected restaurant information to localStorage
+    // localStorage.setItem(
+    //   "favIconStatus",
+    //   JSON.stringify(favIconStatus)
+    // );
+//   window.location.href="../index.html?favorites="+ encodeURIComponent(favIconStatus);
+// }
+
 
 function restaurantLoader(){
     for (let i=0; i<restaurant.length;i++){
@@ -132,40 +155,35 @@ function restaurantLoader(){
 
 function restaurantInfo(restaurant) {
     restName.innerHTML=`${restaurant.name}`;
-    container.style.backgroundImage=`url("${restaurant.Image1}")`;
-    container.style.backgroundSize = "cover";
-    description.innerHTML=`${restaurant.description}`;
+    // container.style.backgroundImage=`url("${restaurant.Image1}")`;
+    // container.style.backgroundSize = "cover";
+    // description.innerHTML=`${restaurant.description}`;
 }
 
-function repeatAction(givenId){
-  restaurant.forEach(restaurant =>{
-    if (restaurant.id==givenId){
-      console.log("sucess");
-    }
-  })
-}
-repeatAction(2);
-restaurantLoader();
-// restCardsButtons=document.querySelectorAll(".restaurant-cards");
-// console.log(restCardsButtons)
-// restCardsButtons.forEach(function (card) {
-//   const restaurantName = card.querySelector("h2")
+restCardsButtons=document.querySelectorAll(".restaurant-cards");
+console.log(restCardsButtons)
+restCardsButtons.forEach(function (card) {
+  const restaurantName = card.querySelector("h2")
   
-// console.log(restaurantName);
-// })
+console.log(restaurantName);
+})
 
 // for (let i = 0; i < restCardsButtons.length; i++) {
 //     const button = restCardsButtons[i];
 
-    // button.addEventListener("click", function () {
-    //   console.log(button.classList);
-    //   button.classList.add("class");
-    //   button.classList.remove("class");
-    //   button.classList.toggle("class");
-    //   button.getAttribute("product-id");
-      // console.log(products[i]);
-  //   });
-  // }
+//     button.addEventListener("click", function () {
+//       console.log(button.classList);
+//     //   button.classList.add("class");
+//     //   button.classList.remove("class");
+//     //   button.classList.toggle("class");
+//     //   button.getAttribute("product-id");
+//       // console.log(products[i]);
+//     });
+//   }
 
 
+<<<<<<< HEAD
+restaurantLoader()
+=======
 
+>>>>>>> 1b1e82d0def0adef516f6fd6e3d6b8551b8c7ef7

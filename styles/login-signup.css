@@ -54,8 +54,8 @@ p {
 
 .box {
   position: absolute;
-  width: 330px;
-  top: 25%;
+  width: 350px;
+  top: 20%;
   left: 50%;
   transform: translate(-50%);
   padding: 35px;
@@ -70,9 +70,12 @@ p {
   margin-bottom: 15px;
 }
 
-.incorrect-credentials-note {
-  color: red !important;
-  font-size: 14px;
+.incorrect-inputs-note {
+  color: #f4740b;
+  font-size: 13px;
+  align-self: baseline;
+  margin-top: -10px;
+  margin-left: 10px;
 }
 
 .box > input {
@@ -98,7 +101,7 @@ input[type="radio"] {
 }
 
 .remember-me {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 input[type="checkbox"] {
@@ -110,23 +113,42 @@ input[type="checkbox"] {
   margin-right: 6px;
 }
 
-.submit-btn {
+.login-btn {
   height: 30px;
   width: 100%;
-  background-color: #ffd700;
   border-radius: 25px;
+  margin-top: 5px;
+  margin-bottom: -5px;
+}
+
+.register-btn {
+  height: 30px;
+  width: 100%;
+  border-radius: 25px;
+  margin-top: 15px;
 }
 
 .submit-btn:hover {
-  background-color: #ffd900d1;
+  background-color: #dcb91f;
 }
 
 .forgot-password {
   text-decoration: none;
-  color: black;
-  font-size: 14px;
+  color: #494949;
+  font-size: 13px;
 }
 
 .forgot-password:hover {
-  color: #626262;
+  color: #dcb91f;
+}
+
+.toggle-link {
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 270px;
+    top: 15%;
+  }
 }
