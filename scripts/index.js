@@ -219,7 +219,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   restaurant.forEach(function (restaurant) {
-    
     console.log(restaurant.name);
   });
 
@@ -261,10 +260,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const favoriteList = document.getElementById("favoriteList");
 
   // Iterate over favorite restaurant IDs and display corresponding cards
-  favorites.forEach(id => {
-      const restaurant = findRestaurantById(id);
-      if (restaurant) {
-          favoriteList.appendChild(createRestaurantCard(restaurant));
-      }
+  favorites.forEach((id) => {
+    const restaurant = findRestaurantById(id);
+    if (restaurant) {
+      favoriteList.appendChild(createRestaurantCard(restaurant));
+    }
   });
 });
