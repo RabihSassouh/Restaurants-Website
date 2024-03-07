@@ -153,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
     card.addEventListener("click", function () {
       const restaurantId = card.dataset.restaurantId;
       const selectedRestaurant = findRestaurantById(restaurantId);
-      // window.location.href = "/pages/singleRest.html";
 
       if (selectedRestaurant) {
         // Save the selected restaurant information to localStorage
@@ -162,11 +161,59 @@ document.addEventListener("DOMContentLoaded", function () {
           JSON.stringify(selectedRestaurant)
         );
 
-        // Redirect to singleRest.html
         window.location.href = "/pages/singleRest.html";
       }
     });
   });
+
+  // this is for the checkbox and filter
+  document.getElementById("filterForm").addEventListener("change", function () {
+    let checkboxes = document.querySelectorAll(".checkbox");
+
+    let checkedCities = [];
+
+    checkboxes.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        checkedCities.push(checkbox.id.toLowerCase());
+      }
+    });
+
+    restaurantCards.forEach(function (card) {
+      let city = card.classList[1];
+
+      if (checkedCities.length === 0 || checkedCities.includes(city)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+
+  // log out function
+
+  // const logoutBtn = document.getElementById("logout");
+
+  // function checkLoggedUser() {
+  //   const userLoggedIn = localStorage.getItem("loggedIn");
+  //   if (userLoggedIn == "no" || userLoggedIn == null) {
+  //     document.location.href = "../pages/login-signup.html";
+  //   }
+  // }
+
+  // window.onload = checkLoggedUser();
+
+  // window.addEventListener("beforeunload", function (e) {
+  //   const remember = localStorage.getItem("remember");
+  //   if (remember == "no" || remember == null)
+  //     localStorage.setItem("loggedIn", "no");
+  // });
+
+  // logoutBtn.addEventListener("click", function () {
+  //   localStorage.setItem("loggedIn", "no");
+  //   localStorage.setItem("remember", "no");
+  //   document.location.href = "./pages/login-signup.html";
+  // });
+
   function findRestaurantById(id) {
     return restaurant.find((restaurant) => restaurant.id === parseInt(id));
   }
@@ -186,9 +233,9 @@ document.addEventListener("DOMContentLoaded", function () {
           const nameText = restaurantName.innerText.toLowerCase();
 
           if (nameText.includes(searchValue)) {
-            card.classList.remove("hidden");
+            card.style.display = "block";
           } else {
-            card.classList.add("hidden");
+            card.style.display = "none";
           }
         }
       });
