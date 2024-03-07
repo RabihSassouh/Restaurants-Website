@@ -17,12 +17,14 @@
   <body>
     <header>
       <h1>FoodieFind</h1>
-      <a class="user-name" href="#"><i class="fa-regular fa-user"></i></a>
+      <a class="logout" id="logout" href="#"
+        ><i class="fa-solid fa-right-from-bracket"></i
+      ></a>
     </header>
 
-    <div class="img-text">
-      <h1>EASTER FEAST</h1>
-      <p>
+    <div class="img-text slideshow">
+      <h1 id="title">EASTER FEAST</h1>
+      <p id="description">
         Happy Easter from the Barbecrew! Enjoy our ready-to-heat Greek-inspired
         feast, featuring herb-rub smoked lamb shoulder, spinach + feta pie,
         lemon roasted potatoes, pistachio-olive oil cake, and more! Place your
@@ -31,6 +33,10 @@
     </div>
     <div class="image-container">
       <div class="image-overlay"></div>
+      <div class="nav-buttons">
+        <button class="nav-button" id="previous">Previous</button>
+        <button class="nav-button" id="next">Next</button>
+      </div>
     </div>
 
     <div class="search-wrapper">
@@ -38,69 +44,70 @@
         <h1>Restaurants</h1>
       </div>
       <div class="search-bar">
-        <input type="search" placeholder="Type to search" />
+        <input id="searchInput" type="search" placeholder="Type to search" />
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
     <div class="restaurant-wrapper">
-      <div class="restaurant-cards">
+      <div class="restaurant-cards favorits hidden favorits-div"></div>
+      <div class="restaurant-cards favorites hidden"></div>
+    </div>
+
+    <div class="filter-wrap">
+      <p><strong>Filter:</strong></p>
+      <div id="filterForm">
+        <label
+          ><input class="checkbox" type="checkbox" id="beirut" /> Beirut</label
+        ><br />
+        <label
+          ><input class="checkbox" type="checkbox" id="baabda" /> Baabda</label
+        ><br />
+        <label
+          ><input class="checkbox" type="checkbox" id="zahle" /> Zahle</label
+        ><br />
+        <label
+          ><input class="checkbox" type="checkbox" id="achrafieh" />
+          Achrafieh</label
+        ><br />
+        <label
+          ><input class="checkbox" type="checkbox" id="hamra" /> Hamra</label
+        ><br />
+        <label
+          ><input class="checkbox" type="checkbox" id="jnoub" /> Jnoub</label
+        >
+      </div>
+    </div>
+
+    <div class="restaurant-wrapper">
+      <div class="restaurant-cards beirut" data-restaurant-id="1">
         <img src="/assets/imgs/restaurantimg1.jpg" />
         <h2>Master Chef</h2>
       </div>
 
-      <div class="restaurant-cards">
+      <div class="restaurant-cards baabda" data-restaurant-id="2">
         <img src="/assets/imgs/restaurantimg2.jpg" />
         <h2>Wendys'</h2>
       </div>
 
-      <div class="restaurant-cards">
+      <div class="restaurant-cards zahle" id="three" data-restaurant-id="3">
         <img src="/assets/imgs/restaurantimg3.jpg" />
         <h2>Chuyax</h2>
       </div>
 
-      <div class="restaurant-cards">
+      <div class="restaurant-cards achrafieh" data-restaurant-id="4">
         <img src="/assets/imgs/restaurantimg4.jpg" />
         <h2>Burgitos</h2>
       </div>
 
-      <div class="restaurant-cards">
+      <div class="restaurant-cards hamra" data-restaurant-id="5">
         <img src="/assets/imgs/restaurantimg5.jpg" />
         <h2>Burger King</h2>
       </div>
 
-      <div class="restaurant-cards">
+      <div class="restaurant-cards jnoub" data-restaurant-id="6">
         <img src="/assets/imgs/restaurantimg6.jpg" />
         <h2>Sushi Restaurant</h2>
       </div>
-      <div class="restaurant-cards">
-        <img src="/assets/imgs/restaurantimg1.jpg" />
-        <h2>Master Chef</h2>
-      </div>
-
-      <div class="restaurant-cards">
-        <img src="/assets/imgs/restaurantimg2.jpg" />
-        <h2>Wendys'</h2>
-      </div>
-
-      <div class="restaurant-cards">
-        <img src="/assets/imgs/restaurantimg3.jpg" />
-        <h2>Chuyax</h2>
-      </div>
-
-      <div class="restaurant-cards">
-        <img src="/assets/imgs/restaurantimg4.jpg" />
-        <h2>Burgitos</h2>
-      </div>
-
-      <div class="restaurant-cards">
-        <img src="/assets/imgs/restaurantimg5.jpg" />
-        <h2>Burger King</h2>
-      </div>
-
-      <div class="restaurant-cards">
-        <img src="/assets/imgs/restaurantimg6.jpg" />
-        <h2>Sushi Restaurant</h2>
-      
     </div>
 
     <footer>
@@ -121,5 +128,6 @@
     </footer>
 
     <script src="/scripts/index.js"></script>
+    <script src="./scripts/singleRest.js"></script>
   </body>
 </html>
