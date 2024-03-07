@@ -37,18 +37,19 @@
     <section class="restaurants-section section flex column">
         <div class="title-add flex row">
             <h1 class="primary-text">Restaurants</h1>
-            <button class="add-btn primary-bg"><i class="fa-solid fa-plus"></i></button>
+            <button class="add-btn primary-bg tooltip" id="add-rest"><i class="fa-solid fa-plus"></i><span class="tooltiptext">Add restaurant</span></button>
         </div>
-        <table class="table white-bg">
+        <table class="table white-bg" id="restTable">
             <tr>
                 <th>Restaurant Name</th>
+                <th>Restaurant Description</th>
                 <th>Location</th>
                 <th>Phone Number</th>
                 <th>Website Link</th>
                 <th>Delete</th>
             </tr>
-        </table>        
+        </table>
+        
     </section>
-   
 </body>
 </html>

@@ -61,7 +61,7 @@ const checkLoginCredentials = () => {
         emptyCredentialsNote.classList.remove("hide")
     else if (isValidAdmin(inputUsername, inputPassword)) {
         localStorage.setItem("loggedIn", "yes");
-        window.location.href = "../adminpanel.html";
+        window.location.href = "./adminpanel.html";
     }
     else if (isValidUser(inputUsername, inputPassword)) {
         window.location.href = "../index.html";

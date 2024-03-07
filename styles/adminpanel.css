@@ -1,37 +1,41 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
 
 body {
   background-color: #494949;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.header {
-  position: fixed;
-  top: 0;
+header {
   width: 100%;
   padding: 25px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(43, 43, 43, 1) 100.2%,
+    rgba(187, 187, 187, 1) 100.2%
+  );
+  color: #fff;
 }
 
 .user-name {
   font-size: 150%;
-  color: black;
+  color: white;
 }
 
-.header h1,
+header h1,
 p {
   font-family: "Times New Roman", Times, serif;
 }
 
 .section {
   position: absolute;
-  top: 25%;
+  top: 17%;
   left: 50%;
   transform: translateX(-50%);
   width: 80vw;
@@ -54,8 +58,29 @@ p {
   background-color: #ebd3a0;
 }
 
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 .table {
   border-collapse: collapse;
+  margin-bottom: 30px;
 }
 
 .table td,
@@ -76,7 +101,7 @@ p {
   color: white;
 }
 
-.delete-btn {
+.delete-rest-btn {
   border: #dcb91f solid 1px;
   border-radius: 12.5px;
   height: 25px;
@@ -84,9 +109,102 @@ p {
   color: #dcb91f;
 }
 
-.delete-btn:hover {
+.delete-rest-btn:hover {
   background-color: #ebd3a0;
   color: white;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 20%;
+  height: 100%;
+  overflow: auto;
+  background-color: #2c2c2ce8;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.incorrect-inputs-note {
+  color: #f4740b;
+  font-size: 13px;
+  align-self: baseline;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+.modal-content > h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content > input {
+  height: 25px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: #626262 solid 1px;
+}
+
+.modal-content > input:focus {
+  outline: none;
+  border: 1px solid #dcb91f;
+}
+
+.modal-add-btn {
+  height: 30px;
+  width: 50%;
+  border-radius: 25px;
+  margin-top: 5px;
+  margin-bottom: -5px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  accent-color: #dcb91f;
+  height: 10px;
+}
+
+.menu-container {
+  margin-top: 15px;
+  gap: 15px;
+}
+
+@media (max-width: 800px) {
+  .modal {
+    padding: 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal {
+    padding: 5%;
+  }
 }
 
 .user-section{
