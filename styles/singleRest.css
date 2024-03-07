@@ -39,9 +39,9 @@ p {
   height: 50px;
   background-color: transparent;
 }
-.section1{
- width: 100%;
- height: 30%; 
+.section1 {
+  width: 100%;
+  height: 30%;
 }
 .description {
   width: 50%;
@@ -63,67 +63,78 @@ p {
   z-index: -1;
 }
 .image2 {
-  width: 50%;
-  height: 300px;
+  width: 100%;
+  height: auto;
 }
 .image3 {
   width: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 300px;
 }
-.section3{
-    padding-top: 30px;
+#image1 {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section3 {
+  width: 100%;
+  padding-top: 30px;
+  background-size: contain;
 }
 footer {
-    background-image: linear-gradient(
-      109.6deg,
-      rgba(43, 43, 43, 1) 100.2%,
-      rgba(187, 187, 187, 1) 100.2%
-    );
-    height: 15vh;
-    width: 100%;
-    color: white;
-  }
-  
-  footer h2 {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 1%;
-  }
-  
-  .footer-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1%;
-    margin-top: 1%;
-    margin-bottom: 0.5%;
-    font-size: 100%;
-  }
-  
-  .footer-icons i {
-    color: white;
-  }
-  
-  .footer-icons a {
-    text-decoration: 0;
-  }
-  
-  .footer-policy {
-    display: flex;
-    width: 100%;
-    padding-left: 15%;
-    padding-right: 15%;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    gap: 21%;
-  }
-  .footer-policy p {
-    color: #fff;
-  }
-  
-  .footer-policy a {
-    text-decoration: none;
-  }
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(43, 43, 43, 1) 100.2%,
+    rgba(187, 187, 187, 1) 100.2%
+  );
+  height: 15vh;
+  width: 100%;
+  color: white;
+}
+
+footer h2 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 1%;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+  margin-top: 1%;
+  margin-bottom: 0.5%;
+  font-size: 100%;
+}
+
+.footer-icons i {
+  color: white;
+}
+
+.footer-icons a {
+  text-decoration: 0;
+}
+
+.footer-policy {
+  display: flex;
+  width: 100%;
+  padding-left: 15%;
+  padding-right: 15%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 21%;
+}
+.footer-policy p {
+  color: #fff;
+}
+
+.footer-policy a {
+  text-decoration: none;
+}

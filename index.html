@@ -8,7 +8,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       integrity="sha384-..."
     />
-    <link rel="icon" type="image/x-icon" href="../assets/imgs/tab-icon.png" />
     <link rel="stylesheet" href="../styles/common/utilities.css" />
     <link rel="stylesheet" href="../styles/common/colors.css" />
     <link rel="stylesheet" href="/styles/index.css" />
@@ -17,7 +16,9 @@
   <body>
     <header>
       <h1>FoodieFind</h1>
-      <a class="user-name" href="#"><i class="fa-regular fa-user"></i></a>
+      <a class="logout" id="logout" href="#"
+        ><i class="fa-solid fa-right-from-bracket"></i
+      ></a>
     </header>
 
     <div class="img-text slideshow">
@@ -47,36 +48,61 @@
       </div>
     </div>
     <div class="restaurant-wrapper">
-      <div class="restaurant-cards favoritesList"></div>
+      <div class="restaurant-cards favorits hidden favorits-div"></div>
     </div>
+
+    <div class="filter-wrap">
+      <p><strong>Filter:</strong></p>
+      <div id="filterForm">
+        <label
+          ><input class="checkbox" type="checkbox" id="beirut" /> Beirut</label
+        ><br />
+        <label
+          ><input class="checkbox" type="checkbox" id="baabda" /> Baabda</label
+        ><br />
+        <label
+          ><input class="checkbox" type="checkbox" id="zahle" /> Zahle</label
+        ><br />
+        <label
+          ><input class="checkbox" type="checkbox" id="achrafieh" />
+          Achrafieh</label
+        ><br />
+        <label
+          ><input class="checkbox" type="checkbox" id="hamra" /> Hamra</label
+        ><br />
+        <label
+          ><input class="checkbox" type="checkbox" id="jnoub" /> Jnoub</label
+        >
+      </div>
+    </div>
+
     <div class="restaurant-wrapper">
-      <div id="invisible-Div-start" class="restaurant-cards hidden"></div>
-      <div class="restaurant-cards" data-restaurant-id="1">
+      <div class="restaurant-cards beirut" data-restaurant-id="1">
         <img src="/assets/imgs/restaurantimg1.jpg" />
         <h2>Master Chef</h2>
       </div>
 
-      <div class="restaurant-cards" data-restaurant-id="2">
+      <div class="restaurant-cards baabda" data-restaurant-id="2">
         <img src="/assets/imgs/restaurantimg2.jpg" />
         <h2>Wendys'</h2>
       </div>
 
-      <div class="restaurant-cards" id="three" data-restaurant-id="3">
+      <div class="restaurant-cards zahle" id="three" data-restaurant-id="3">
         <img src="/assets/imgs/restaurantimg3.jpg" />
         <h2>Chuyax</h2>
       </div>
 
-      <div class="restaurant-cards" data-restaurant-id="4">
+      <div class="restaurant-cards achrafieh" data-restaurant-id="4">
         <img src="/assets/imgs/restaurantimg4.jpg" />
         <h2>Burgitos</h2>
       </div>
 
-      <div class="restaurant-cards" data-restaurant-id="5">
+      <div class="restaurant-cards hamra" data-restaurant-id="5">
         <img src="/assets/imgs/restaurantimg5.jpg" />
         <h2>Burger King</h2>
       </div>
 
-      <div class="restaurant-cards" data-restaurant-id="6">
+      <div class="restaurant-cards jnoub" data-restaurant-id="6">
         <img src="/assets/imgs/restaurantimg6.jpg" />
         <h2>Sushi Restaurant</h2>
       </div>

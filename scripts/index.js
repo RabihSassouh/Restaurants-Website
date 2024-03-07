@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const previous = document.getElementById("previous");
   const titleElement = document.getElementById("title");
   const descriptionElement = document.getElementById("description");
+  const logOut = document.getElementById("logout");
   let currentIndex = 0;
   let imageContainer = document.querySelector(".image-container");
 
@@ -193,26 +194,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // const logoutBtn = document.getElementById("logout");
 
-  // function checkLoggedUser() {
-  //   const userLoggedIn = localStorage.getItem("loggedIn");
-  //   if (userLoggedIn == "no" || userLoggedIn == null) {
-  //     document.location.href = "../pages/login-signup.html";
-  //   }
-  // }
+  function checkLoggedUser() {
+    const userLoggedIn = localStorage.getItem("loggedIn");
+    if (userLoggedIn == "no" || userLoggedIn == null) {
+      document.location.href = "../pages/login-signup.html";
+    }
+  }
 
-  // window.onload = checkLoggedUser();
+  window.onload = checkLoggedUser();
 
-  // window.addEventListener("beforeunload", function (e) {
-  //   const remember = localStorage.getItem("remember");
-  //   if (remember == "no" || remember == null)
-  //     localStorage.setItem("loggedIn", "no");
-  // });
+  window.addEventListener("beforeunload", function (e) {
+    const remember = localStorage.getItem("remember");
+    if (remember == "no" || remember == null)
+      localStorage.setItem("loggedIn", "no");
+  });
 
-  // logoutBtn.addEventListener("click", function () {
-  //   localStorage.setItem("loggedIn", "no");
-  //   localStorage.setItem("remember", "no");
-  //   document.location.href = "./pages/login-signup.html";
-  // });
+  logOut.addEventListener("click", function () {
+    localStorage.setItem("loggedIn", "no");
+    localStorage.setItem("remember", "no");
+    document.location.href = "./pages/login-signup.html";
+  });
 
   function findRestaurantById(id) {
     return restaurant.find((restaurant) => restaurant.id === parseInt(id));
