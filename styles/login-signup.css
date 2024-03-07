@@ -128,7 +128,7 @@ input[type="checkbox"] {
 }
 
 .submit-btn:hover {
-  background-color: #dcb91f;
+  background-color: #d19a23;
 }
 
 .forgot-password {
@@ -138,7 +138,7 @@ input[type="checkbox"] {
 }
 
 .forgot-password:hover {
-  color: #dcb91f;
+  color: #d19a23;
 }
 
 .toggle-link {
