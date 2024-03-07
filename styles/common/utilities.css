@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .flex {
   display: flex;
 }
@@ -18,10 +19,6 @@
 
 .column {
   flex-direction: column;
-}
-
-.show {
-  display: block;
 }
 
 .hide {
