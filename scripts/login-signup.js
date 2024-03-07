@@ -60,17 +60,20 @@ const checkLoginCredentials = () => {
     if(inputUsername === "" || inputPassword === "")
         emptyCredentialsNote.classList.remove("hide")
     else if (isValidAdmin(inputUsername, inputPassword)) {
+        const remember = remembermeCheckbox.checked;
+        remember ? localStorage.setItem("remember", "yes") : localStorage.setItem("remember", "no");
         localStorage.setItem("loggedIn", "yes");
         window.location.href = "./adminpanel.html";
     }
     else if (isValidUser(inputUsername, inputPassword)) {
-        window.location.href = "../index.html";
-        localStorage.setItem("loggedIn", "yes");
         const remember = remembermeCheckbox.checked;
+        console.log(remember);
         remember ? localStorage.setItem("remember", "yes") : localStorage.setItem("remember", "no");
+        localStorage.setItem("loggedIn", "yes");
+        window.location.href = "../index.html";
     }
     else
-        incorrectCredentialsNote.classList.remove("hide");  
+        incorrectCredentialsNote.classList.remove("hide");
 };
 
 

@@ -124,8 +124,6 @@ favIcon.addEventListener("click", () => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
     alert("Restaurant added to favorites!");
   }
-
-  window.location.href = "../index.html";
 });
 
 document.addEventListener("DOMContentLoaded", function () {
