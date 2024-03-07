@@ -246,5 +246,5 @@ window.addEventListener('beforeunload', function (e) {
 logoutBtn.addEventListener("click", function () {
     localStorage.setItem("loggedIn", "no");
     localStorage.setItem("remember", "no");
-    document.location.href = "./pages/login-signup.html";
+    document.location.href = "./login-signup.html";
 });
