@@ -191,28 +191,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // log out function
 
-  const logoutBtn = document.getElementById("logout");
+  // const logoutBtn = document.getElementById("logout");
 
-  function checkLoggedUser() {
-    const userLoggedIn = localStorage.getItem("loggedIn");
-    if (userLoggedIn == "no" || userLoggedIn == null) {
-      document.location.href = "../pages/login-signup.html";
-    }
-  }
+  // function checkLoggedUser() {
+  //   const userLoggedIn = localStorage.getItem("loggedIn");
+  //   if (userLoggedIn == "no" || userLoggedIn == null) {
+  //     document.location.href = "../pages/login-signup.html";
+  //   }
+  // }
 
-  window.onload = checkLoggedUser();
+  // window.onload = checkLoggedUser();
 
-  window.addEventListener("beforeunload", function (e) {
-    const remember = localStorage.getItem("remember");
-    if (remember == "no" || remember == null)
-      localStorage.setItem("loggedIn", "no");
-  });
+  // window.addEventListener("beforeunload", function (e) {
+  //   const remember = localStorage.getItem("remember");
+  //   if (remember == "no" || remember == null)
+  //     localStorage.setItem("loggedIn", "no");
+  // });
 
-  logoutBtn.addEventListener("click", function () {
-    localStorage.setItem("loggedIn", "no");
-    localStorage.setItem("remember", "no");
-    document.location.href = "./pages/login-signup.html";
-  });
+  // logoutBtn.addEventListener("click", function () {
+  //   localStorage.setItem("loggedIn", "no");
+  //   localStorage.setItem("remember", "no");
+  //   document.location.href = "./pages/login-signup.html";
+  // });
 
   function findRestaurantById(id) {
     return restaurant.find((restaurant) => restaurant.id === parseInt(id));
@@ -243,7 +243,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 restaurantCards.forEach(function (card) {
   card.addEventListener("click", function () {
     window.location.href = "/pages/singleRest.html";
@@ -253,4 +252,3 @@ restaurantCards.forEach(function (card) {
 //   localStorage.setItem("selectedRestaurant", JSON.stringify(restaurant));
 //   window.location.href = "/pages/singleRest.html";
 // });
-
