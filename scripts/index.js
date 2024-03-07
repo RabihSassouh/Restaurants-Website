@@ -196,3 +196,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
+// let item=localStorage.getItem("item");
+// if (item){
+//   let favorites=document.getElementById("favorites");
+//   let newFavorite=document.createElement("div");
+//   newFavorite.textContent=item;
+//   favorites.appendChild(newFavorite);
+// }
+
+// let urlParams = new URLSearchParams(window.location.search);
+// let favIconStatus= urlParams.get("favIconStatus");
+// if (favIconStatus){
+//   let favorites=document.getElementById("favorites");
+//   let newFavorite= document.createElement("div");
+//   favorites.append()
+// }

@@ -15,7 +15,7 @@ let restaurant=[
   
     instagram: "MasterChef",
     Opening: "Opening hours: 11 am till 1 am",
-    phone: "Phone number: +961 70708090",
+    phone: "+961 70708090",
     website: "www.masterchef.lb",
     Image1: "../assets/imgs/masterChef1.jpg",
     Image2: "../assets/imgs/masterChef2.jpg",
@@ -25,12 +25,10 @@ let restaurant=[
     id:2,
     name: "Wendy's",
     description: "Put Down The Pizza Bagel. Pick Up The Burger. Stay hungry my friends!",
-    // "KFC is renowned for its iconic Southern-inspired cuisine, featuring world-famous fried"+
-    // " chicken seasoned with a proprietary blend of herbs and spices.",
     location: "Mansourieh, Moutazah",
     instagram: "Wendy's-lb",
     Opening: "Opening hours: 7 am till 10 pm",
-    phone: "Phone number: +961 04 409 737",
+    phone: "+961 04 409 737",
     website: "www.wendys.lb", 
     Image1: "../assets/imgs/wendy's1.jpg",
     Image2: "../assets/imgs/wendy's2.jpg",
@@ -44,7 +42,7 @@ let restaurant=[
       location: "Ghanem Street, Ain Mreisse, Beirut",
       instagram: "Chuyax-lb",
       Opening: "Opening hours: 9 am till 12 am",
-      phone: "Phone number: +961 01 013 737",
+      phone: "+961 01 013 737",
       website: "www.chuyax.lb", 
       Image1: "../assets/imgs/chuyax1.jpg",
       Image2: "../assets/imgs/chuyax2.jpg",
@@ -59,7 +57,7 @@ let restaurant=[
       location: "Mar Mikhael, Pharaon Street, Beirut",
       instagram: "burgitos-lb",
       Opening: "Opening hours: 10 am till 12 am",
-      phone: "Phone number: +961 01 502244",
+      phone: "+961 01 502244",
       website: "www.burgitos.lb", 
       Image1: "../assets/imgs/burgitos1.jpg",
       Image2: "../assets/imgs/burgitos2.jpg",
@@ -74,7 +72,7 @@ let restaurant=[
       location: " Beirut, Forn El Chebbak",
       instagram: "burgerking-lb",
       Opening: "Opening hours: 10 am till 1 am",
-      phone: "Phone number: +961 01 771266",
+      phone: "+961 01 771266",
       website: "www.burgerking.lb", 
       Image1: "../assets/imgs/burgerking1.jpg",
       Image2: "../assets/imgs/burgerking2.jpg",
@@ -88,7 +86,7 @@ let restaurant=[
       location: " Beirut, Al Raouche",
       instagram: "sushi-lb",
       Opening: "Opening hours: 9 am till 1 am",
-      phone: "Phone number: +961 01 255811",
+      phone: "+961 01 255811",
       website: "www.sushi.lb", 
       Image1: "../assets/imgs/sushi1.jpg",
       Image2: "../assets/imgs/sushi2.jpg",
@@ -97,14 +95,28 @@ let restaurant=[
 
 ]
 
-favIcon.addEventListener("click", () => {
+favIcon.addEventListener("click", function()  {
   if (favIconStatus) {
     alert("Removed from favorites");
+    // window.location.href="../index.html?favorites="+ `${restaurant.id}`;
   } else {
-    alert("Added to favorite");
+    alert("Added to favorites");
   }
   favIconStatus = !favIconStatus;
 })
+    // localStorage.setItem("item","test")
+    // window.location.href="../index.html"
+    // ?favorites="+ `${data-restaurant.id}`;
+  
+  // if (favIconStatus) {
+    // Save the selected restaurant information to localStorage
+    // localStorage.setItem(
+    //   "favIconStatus",
+    //   JSON.stringify(favIconStatus)
+    // );
+//   window.location.href="../index.html?favorites="+ encodeURIComponent(favIconStatus);
+// }
+
 
 function restaurantLoader(){
     for (let i=0; i<restaurant.length;i++){
