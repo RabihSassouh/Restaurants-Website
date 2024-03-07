@@ -33,11 +33,21 @@ p {
   font-family: "Times New Roman", Times, serif;
 }
 
-.section {
+.users-section {
   position: absolute;
-  top: 17%;
+  top: 18%;
   left: 50%;
   transform: translateX(-50%);
+  width: 80vw;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.restaurants-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 80vw;
   gap: 15px;
 }
@@ -205,12 +215,4 @@ input[type="checkbox"] {
   .modal {
     padding: 5%;
   }
-}
-
-.user-section{
-  top: 25%;
-  left: 50%;
-  padding: 50px;
-  width: 80vw;
-  gap: 15px;
 }
