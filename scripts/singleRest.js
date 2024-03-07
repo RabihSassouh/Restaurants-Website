@@ -1,7 +1,7 @@
 const favIcon = document.getElementById("favIcon");
 const restName = document.getElementById("restName");
 
-// Retrieve the selected restaurant information from localStorage
+// get restaurant information from localStorage
 const selectedRestaurant = JSON.parse(
   localStorage.getItem("selectedRestaurant")
 );
@@ -104,6 +104,11 @@ let restaurant = [
     Image3: "../assets/imgs/sushi3.jpg",
   },
 ];
+let menus = [
+  "<b>Appetizers</b><br>Bruscheta - 10$<br>Calamari - 5$<br>Mozarella Sticks - 3$<br>Buffalo Wings - 7$",
+  "<b>Sandwiches and Burgers</b><br>Classic Cheese Burger - 9$<br>Grilled Chicken Sandwich - 8$<br>Veggie Burger - 7$<br>Turkey Club Sandwich - 10$<br>Fish Sandwish - 7.5$",
+  "<b>Soups and Salads</b><br>Caesar Salad - 4$<br>Gardeb Salad - 4$<br>French Onion Soap - 3.5$<br>Clam chowder - 7$"
+];
 
 favIcon.addEventListener("click", () => {
   let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
@@ -132,10 +137,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const restName = document.getElementById("restName");
   const description = document.getElementById("description");
   const location = document.getElementById("location");
+
   const instagram = document.getElementById("instagram");
   const openingHours = document.getElementById("openingHours");
   const phoneNumber = document.getElementById("phoneNumber");
   const website = document.getElementById("website");
+
   const image1 = document.getElementById("image1");
   const image2 = document.getElementById("image2");
   const image3 = document.getElementById("image3");
@@ -143,11 +150,36 @@ document.addEventListener("DOMContentLoaded", function () {
   restName.textContent = selectedRestaurant.name;
   description.textContent = selectedRestaurant.description;
   location.textContent = "Location: " + selectedRestaurant.location;
+
   instagram.textContent = "Instagram: " + selectedRestaurant.instagram;
   openingHours.textContent = selectedRestaurant.Opening;
   phoneNumber.textContent = selectedRestaurant.phone;
   website.textContent = selectedRestaurant.website;
+
   image1.src = selectedRestaurant.Image1;
   image2.src = selectedRestaurant.Image2;
   image3.src = selectedRestaurant.Image3;
 });
+
+// const logoutBtn = document.getElementById("logout");
+
+// function checkLoggedUser() {
+//     const userLoggedIn = localStorage.getItem("loggedIn");
+//     if (userLoggedIn == "no" || userLoggedIn == null) {
+//         document.location.href = "../pages/login-signup.html";
+//     }
+// };
+
+// window.onload = checkLoggedUser();
+
+// window.addEventListener('beforeunload', function (e) {
+//     const remember = localStorage.getItem("remember");
+//     if (remember == "no" || remember == null)
+//         localStorage.setItem("loggedIn", "no");
+// });
+
+// logoutBtn.addEventListener("click", function () {
+//     localStorage.setItem("loggedIn", "no");
+//     localStorage.setItem("remember", "no");
+//     document.location.href = "./pages/login-signup.html";
+// });
