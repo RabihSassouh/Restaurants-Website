@@ -1,6 +1,15 @@
 const favIcon = document.getElementById("favIcon");
 const restName=document.getElementById("restName");
 
+<<<<<<< HEAD
+=======
+
+  // Retrieve the selected restaurant information from localStorage
+  const selectedRestaurant = JSON.parse(
+    localStorage.getItem("selectedRestaurant")
+  );
+
+>>>>>>> 1b1e82d0def0adef516f6fd6e3d6b8551b8c7ef7
 const container=document.querySelector(".container");
 const description=document.getElementById("description");
 let favIconStatus = false;
@@ -95,6 +104,7 @@ let restaurant=[
 
 ]
 
+<<<<<<< HEAD
 favIcon.addEventListener("click", function()  {
   if (favIconStatus) {
     alert("Removed from favorites");
@@ -102,6 +112,23 @@ favIcon.addEventListener("click", function()  {
   } else {
     alert("Added to favorites");
   }
+=======
+
+    const restaurantDescription = document.createElement("p");
+    restaurantDescription.textContent = selectedRestaurant.description;
+
+    restaurantInfo.appendChild(restaurantName);
+    restaurantInfo.appendChild(restaurantDescription);
+  }
+});
+
+favIcon.addEventListener("click", () => {
+  if (favIconStatus) {
+    alert("Removed from favorites");
+  } else {
+    alert("Added to favorite");
+  }
+>>>>>>> 1b1e82d0def0adef516f6fd6e3d6b8551b8c7ef7
   favIconStatus = !favIconStatus;
 })
     // localStorage.setItem("item","test")
@@ -155,4 +182,8 @@ console.log(restaurantName);
 //   }
 
 
+<<<<<<< HEAD
 restaurantLoader()
+=======
+
+>>>>>>> 1b1e82d0def0adef516f6fd6e3d6b8551b8c7ef7

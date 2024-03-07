@@ -4,57 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodieFind | Login</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha384-..."
-    />
     <link rel="icon" type="image/x-icon" href="../assets/imgs/tab-icon.png">
     <link rel="stylesheet" href="../styles/common/utilities.css" />
     <link rel="stylesheet" href="../styles/common/colors.css" />
     <link rel="stylesheet" href="../styles/login-signup.css" />
 </head>
 <body>
-    <!-- <header class="header">
-        <h1 class="white-text">FoodieFind</h1>
-        <a class="user-name white-text" href="#"><i class="fa-regular fa-user white-text"></i></a>
-    </header> -->
-
-    <div class="container hide">
-        <img src="../assets/imgs/login-signup-bg.jpg" />
+    <div class="container" id="loginContainer">
+        <img src="../assets/imgs/bg.jpg" />
 
         <div class="box white-bg flex column">
             <h1 class="bold">LOGIN</h1>
-            <p class="incorrect-credentials-note hide" id="incorrectCredentialsNote">incorrect username or password!</p>
+            <p class="incorrect-inputs-note hide" id="incorrectCredentialsNote">Incorrect username or password</p>
+            <p class="incorrect-inputs-note hide" id="emptyCredentialsNote">Enter both username and password</p>
             <input type="text" class="username-btn" id="username" placeholder="username" />
             <input type="password" class="password-btn" id="password" placeholder="password" />
-            <button class="submit-btn white-text bold" id="login">Log in</button>
             <label class="remember-me">
                 <input type="checkbox" id="rememberMe"/>Remember me
             </label>
+            <button class="login-btn white-text bold primary-bg" id="login">Log in</button>
             <a class="forgot-password" href="#">Forgot password?</a>
+            <p>Don't have an account? <span class="toggle-link bold primary-text" id="signUpLink">Sign up</span></p>
         </div>
     </div>
 
-    <div class="container">
-        <img src="../assets/imgs/login-signup-bg.jpg" />
+    <div class="container hide" id="signupContainer">
+        <img src="../assets/imgs/bg.jpg" />
 
         <div class="box white-bg flex column">
             <h1 class="bold">SIGN UP</h1>
-            <p class="incorrect-credentials-note hide" id="incorrectCredentialsNote">incorrect username or password!</p>
-            <input type="email" class="" id="email" placeholder="email" />
-            <input type="text" class="" id="username" placeholder="username" />
-            <input type="password" class="password-btn" id="password" placeholder="password" />
-            <input type="password" class="" id="username" placeholder="confirm password" />
+            <p class="incorrect-inputs-note hide" id="requiredNote">Please fill in all the inputs</p>
+            <input type="text" id="fullName" placeholder="Full Name" />
+            <input type="text" id="newUsername" placeholder="Username" />
+            <p class="incorrect-inputs-note hide" id="usernameNote">Username already exists</p>
+            <input type="email"  id="email" placeholder="E-mail" />
+            <input type="password" class="password-btn" id="newPassword" placeholder="Password" />
+            <input type="password"  id="confirmPassword" placeholder="Confirm password" />
+            <p class="incorrect-inputs-note hide" id="passwordNote">Passwords are not matching</p>
             <div class="gender">
-                <input type="radio" id="male" value="male" name="gender">
+                <input type="radio" id="male" value="Male" name="gender">
                 <label>Male</label>
-                <input type="radio" id="male" value="female" name="gender">
+                <input type="radio" id="male" value="Female" name="gender">
                 <label>Female</label>
-                <input type="radio" id="male" value="not-set" name="gender">
+                <input type="radio" id="male" value="Not Set" name="gender">
                 <label>Not set</label>
             </div>
-            <button class="submit-btn white-text bold" id="login">Register</button>
+            <button class="register-btn white-text bold primary-bg" id="register">Register</button>
+            <p>Already have an account? <span class="toggle-link bold primary-text" id="loginLink">Log in</span></p>
         </div>
     </div>
 

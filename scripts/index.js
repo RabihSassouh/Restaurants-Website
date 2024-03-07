@@ -196,19 +196,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-// let item=localStorage.getItem("item");
-// if (item){
-//   let favorites=document.getElementById("favorites");
-//   let newFavorite=document.createElement("div");
-//   newFavorite.textContent=item;
-//   favorites.appendChild(newFavorite);
-// }
-
-// let urlParams = new URLSearchParams(window.location.search);
-// let favIconStatus= urlParams.get("favIconStatus");
-// if (favIconStatus){
-//   let favorites=document.getElementById("favorites");
-//   let newFavorite= document.createElement("div");
-//   favorites.append()
-// }
+restaurantCards.forEach(function (card) {
+  card.addEventListener("click", function () {
+    window.location.href = "/pages/singleRest.html";
+  });
+});
+// restaurant-cards.addEventListener("click", function () {
+//   localStorage.setItem("selectedRestaurant", JSON.stringify(restaurant));
+//   window.location.href = "/pages/singleRest.html";
+// });
+>>>>>>>>> Temporary merge branch 2
