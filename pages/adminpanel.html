@@ -19,21 +19,7 @@
         <h1>FoodieFind</h1>
         <a class="user-name" href="#"><i class="fa-regular fa-user"></i></a>
     </header>
-    <section class="users-section flex column">
-        <div class="title-add flex row">
-            <h1 class="primary-text">Users</h1>
-            <button class="add-btn primary-bg"><i class="fa-solid fa-plus"></i></button>
-        </div>
-        <table class="table white-bg">
-            <tr>
-                <th>User Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-                <th>Delete</th>
-            </tr>
-        </table>        
-    </section>
-    
+
     <section class="restaurants-section section flex column">
         <div class="title-add flex row">
             <h1 class="primary-text">Restaurants</h1>
@@ -50,6 +36,26 @@
             </tr>
         </table>
     </section>
+        
+    <div class="modal hide" id="restModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Restaurant</h2>
+            <p class="incorrect-inputs-note hide" id="requiredNote">Please fill in all the inputs</p>
+            <input type="text" id="name" placeholder="Restaurant name" />
+            <input type="text" id="description" placeholder="Restaurant description" />
+            <input type="text" id="location" placeholder="Location" />
+            <input type="text" id="openingHours" placeholder="Opening hours" />
+            <input type="text" id="phoneNumber" placeholder="Phone number" />
+            <input type="text" id="webLink" placeholder="Website link" />
+            <input type="text" id="instagram" placeholder="Instagram" />
+            <p>Choose menu(s) to add:</p>
+            <div class="menu-container flex column center" id="menuContainer"></div>
+            <br>
+            <button class="modal-add-btn white-text bold primary-bg" id="modalAddRest">Add</button>
+        </div>
+    </div>
+    
     <script src="../scripts/adminpanel.js"></script>
 </body>
 </html>
