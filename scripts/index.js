@@ -205,4 +205,3 @@ restaurantCards.forEach(function (card) {
 //   localStorage.setItem("selectedRestaurant", JSON.stringify(restaurant));
 //   window.location.href = "/pages/singleRest.html";
 // });
->>>>>>>>> Temporary merge branch 2

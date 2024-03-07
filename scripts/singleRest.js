@@ -100,23 +100,23 @@ let restaurant=[
 
 ]
 
-<<<<<<< HEAD
-favIcon.addEventListener("click", function()  {
-  if (favIconStatus) {
-    alert("Removed from favorites");
-    // window.location.href="../index.html?favorites="+ `${restaurant.id}`;
-  } else {
-    alert("Added to favorites");
-  }
-=======
 
-    const restaurantDescription = document.createElement("p");
-    restaurantDescription.textContent = selectedRestaurant.description;
+// favIcon.addEventListener("click", function()  {
+//   if (favIconStatus) {
+//     alert("Removed from favorites");
+//     // window.location.href="../index.html?favorites="+ `${restaurant.id}`;
+//   } else {
+//     alert("Added to favorites");
+//   }
 
-    restaurantInfo.appendChild(restaurantName);
-    restaurantInfo.appendChild(restaurantDescription);
-  }
-});
+
+//     const restaurantDescription = document.createElement("p");
+//     restaurantDescription.textContent = selectedRestaurant.description;
+
+//     restaurantInfo.appendChild(restaurantName);
+//     restaurantInfo.appendChild(restaurantDescription);
+//   }
+// });
 
 favIcon.addEventListener("click", () => {
   if (favIconStatus) {
