@@ -24,7 +24,7 @@ let restaurant=[
     website: "www.masterchef.lb",
     Image1: "../assets/imgs/masterChef1.jpg",
     Image2: "../assets/imgs/masterChef2.jpg",
-    Image3: "../assets/imgs/masterChef2.jpg",
+    Image3: "../assets/imgs/masterChef3.jpg",
     },
     {
     id:2,
@@ -118,14 +118,26 @@ let restaurant=[
 //   }
 // });
 
+
 favIcon.addEventListener("click", () => {
-  if (favIconStatus) {
-    alert("Removed from favorites");
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+  if (favorites.includes(selectedRestaurant.id)) {
+      // Remove the restaurant from favorites
+      favorites = favorites.filter(id => id !== selectedRestaurant.id);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      alert("Restaurant removed from favorites!");
   } else {
-    alert("Added to favorite");
+      // Add the restaurant to favorites
+      favorites.push(selectedRestaurant.id);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      alert("Restaurant added to favorites!");
   }
-  favIconStatus = !favIconStatus;
-})
+
+  // Redirect to index.html page
+  window.location.href = "../index.html";
+});
+
     // localStorage.setItem("item","test")
     // window.location.href="../index.html"
     // ?favorites="+ `${data-restaurant.id}`;
@@ -189,8 +201,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const phoneNumber = document.getElementById("phoneNumber");
   const website = document.getElementById("website");
   const image1= document.getElementById("image1");
-  const image2= document.getElementById("website");
-  const Image3= document.getElementById("website");
+  const image2= document.getElementById("image2");
+  const image3= document.getElementById("image3");
 
   restName.textContent = selectedRestaurant.name;
   description.textContent = selectedRestaurant.description;

@@ -253,3 +253,18 @@ restaurantCards.forEach(function (card) {
 //   localStorage.setItem("selectedRestaurant", JSON.stringify(restaurant));
 //   window.location.href = "/pages/singleRest.html";
 // });
+document.addEventListener("DOMContentLoaded", function () {
+  // Load favorite restaurant cards from local storage
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+  // Get the favoriteList element
+  const favoriteList = document.getElementById("favoriteList");
+
+  // Iterate over favorite restaurant IDs and display corresponding cards
+  favorites.forEach(id => {
+      const restaurant = findRestaurantById(id);
+      if (restaurant) {
+          favoriteList.appendChild(createRestaurantCard(restaurant));
+      }
+  });
+});
