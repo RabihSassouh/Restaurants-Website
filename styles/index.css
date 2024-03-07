@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #ffd700;
+  background-color: #dcb91f;
 }
 
 .header {
@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffd700;
+  background-color: #dcb91f;
   z-index: 1000;
 }
 
@@ -98,7 +98,7 @@ p {
   padding-left: 0.5%;
   padding-right: 0.5%;
   border-radius: 20px;
-  border: 1px solid #ffd700;
+  border: 1px solid #dcb91f;
 }
 
 .search-bar i {
