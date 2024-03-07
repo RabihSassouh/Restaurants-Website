@@ -140,28 +140,28 @@ favIcon.addEventListener("click", () => {
 // }
 
 
-function restaurantLoader(){
-    for (let i=0; i<restaurant.length;i++){
-        const restObject=restaurant[i];
+// function restaurantLoader(){
+//     for (let i=0; i<restaurant.length;i++){
+//         const restObject=restaurant[i];
         
-        const restCard = restaurantInfo(restObject);
-    }
-}
+//         const restCard = restaurantInfo(restObject);
+//     }
+// }
 
-function restaurantInfo(restaurant) {
-    restName.innerHTML=`${restaurant.name}`;
+// function restaurantInfo(restaurant) {
+//     restName.innerHTML=`${restaurant.name}`;
     // container.style.backgroundImage=`url("${restaurant.Image1}")`;
     // container.style.backgroundSize = "cover";
     // description.innerHTML=`${restaurant.description}`;
-}
+// }
 
-restCardsButtons=document.querySelectorAll(".restaurant-cards");
-console.log(restCardsButtons)
-restCardsButtons.forEach(function (card) {
-  const restaurantName = card.querySelector("h2")
+// restCardsButtons=document.querySelectorAll(".restaurant-cards");
+// console.log(restCardsButtons)
+// restCardsButtons.forEach(function (card) {
+//   const restaurantName = card.querySelector("h2")
   
-console.log(restaurantName);
-})
+// console.log(restaurantName);
+// })
 
 // for (let i = 0; i < restCardsButtons.length; i++) {
 //     const button = restCardsButtons[i];
@@ -176,4 +176,31 @@ console.log(restaurantName);
 //     });
 //   }
 
-restaurantLoader()
+// restaurantLoader()
+document.addEventListener("DOMContentLoaded", function () {
+  const selectedRestaurant = JSON.parse(localStorage.getItem("selectedRestaurant"));
+
+  // Display restaurant details on the singleRest.html page
+  const restName = document.getElementById("restName");
+  const description = document.getElementById("description");
+  const location = document.getElementById("location");
+  const instagram = document.getElementById("instagram");
+  const openingHours = document.getElementById("openingHours");
+  const phoneNumber = document.getElementById("phoneNumber");
+  const website = document.getElementById("website");
+  const image1= document.getElementById("image1");
+  const image2= document.getElementById("website");
+  const Image3= document.getElementById("website");
+
+  restName.textContent = selectedRestaurant.name;
+  description.textContent = selectedRestaurant.description;
+  location.textContent = "Location: " + selectedRestaurant.location;
+  instagram.textContent = "Instagram: " + selectedRestaurant.instagram;
+  openingHours.textContent = selectedRestaurant.Opening;
+  phoneNumber.textContent = selectedRestaurant.phone;
+  website.textContent = selectedRestaurant.website;
+  image1.src= selectedRestaurant.Image1;
+  image2.src= selectedRestaurant.Image2;
+  image3.src= selectedRestaurant.Image3;
+  
+});

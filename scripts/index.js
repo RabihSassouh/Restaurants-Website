@@ -219,6 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   restaurant.forEach(function (restaurant) {
+    
     console.log(restaurant.name);
   });
 
