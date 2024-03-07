@@ -27,9 +27,6 @@ img {
   z-index: 1000;
 }
 
-.header > h1 {
-}
-
 .user-name {
   font-size: 150%;
 }
@@ -119,6 +116,7 @@ input[type="checkbox"] {
   border-radius: 25px;
   margin-top: 5px;
   margin-bottom: -5px;
+  cursor: pointer;
 }
 
 .register-btn {
@@ -126,6 +124,7 @@ input[type="checkbox"] {
   width: 100%;
   border-radius: 25px;
   margin-top: 15px;
+  cursor: pointer;
 }
 
 .submit-btn:hover {
